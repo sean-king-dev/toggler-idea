@@ -11,7 +11,6 @@ body, html {
 }
 
 .input-row {
-    border: 1px solid red;
     width: 400px;
     margin: 0 auto;
     text-align: center;
@@ -19,7 +18,6 @@ body, html {
 }
 
 .label_wrapper {
-    border: 1px solid yellow;
     display: flex;
     
 }
@@ -30,7 +28,6 @@ body, html {
 }
 
 .dropper {
-    border: 1px dotted orange;
     width: 50px;
     background: var(--green);
     border-radius: 0 20px 20px 0;
@@ -81,12 +78,10 @@ option {
 }
 
 i.fa.fa-angle-up {
-    border: 1px solid black;
     padding-top: 0;
 }
 
 i.fa.fa-angle-down {
-    border: 1px solid red;
     padding-top: 10%;
 
 }
@@ -99,12 +94,6 @@ i.fa.fa-angle-down {
     display: none;
 }
 
-
-/* .fake-select .dropper i.fa.fa-angle-up {
-    display: none !important;
-} */
-
 .fake-select.active .dropper .fa-angle-up {
-    border: 4px dotted magenta;
     display: block !important;
 }
