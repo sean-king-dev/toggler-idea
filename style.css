@@ -76,3 +76,35 @@ option {
     text-align: center;
 }
 
+.dropper .fa {
+    font-size: 1.7rem;
+}
+
+i.fa.fa-angle-up {
+    border: 1px solid black;
+    padding-top: 0;
+}
+
+i.fa.fa-angle-down {
+    border: 1px solid red;
+    padding-top: 10%;
+
+}
+
+.fake-select .dropper i.fa.fa-angle-down {
+    display: block;
+}
+
+.fake-select .dropper i.fa.fa-angle-up {
+    display: none;
+}
+
+
+/* .fake-select .dropper i.fa.fa-angle-up {
+    display: none !important;
+} */
+
+.fake-select.active .dropper .fa-angle-up {
+    border: 4px dotted magenta;
+    display: block !important;
+}
