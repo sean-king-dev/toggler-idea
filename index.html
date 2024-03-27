@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+    <style>
+        :root {
+    --green: #57de61;
+    --charcoal: #252f38;
+    --white: #fff;
+}
+
+body, html {
+    background: var(--charcoal);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-row {
+    border: 1px solid red;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%
+}
+
+.label_wrapper {
+    border: 1px solid yellow;
+    display: flex;
+    
+}
+.label_wrapper .label {
+    width: calc(100% - 50px);
+    height: 40px;
+    padding-left: 10%;
+}
+
+.dropper {
+    border: 1px dotted orange;
+    width: 50px;
+    background: var(--green);
+    border-radius: 0 20px 20px 0;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+select.hidden.initial {
+    background: var(--charcoal);
+    background: transparent;
+    /* background: red; */
+    /* background: linear-gradient(to right, var(--charcoal) 0%, var(--charcoal) calc(100% - 50px), transparent calc(100% - 50px), transparent calc(100% - 50px)); */
+    width: 100%;
+    color: var(--white);
+    height: 40px;
+}
+
+select.hidden {
+    background: var(--charcoal);
+    width: 400px;
+    text-align: center;
+    height: 38px;
+    margin-top: -40px;
+    position: relative;
+    top: -30px;
+    z-index: 5;
+}
+
+option {
+    background: var(--charcoal);
+    border: var(--green);
+}
+
+.dropdown {
+    height: 0px;
+    overflow-y: hidden;
+}
+
+.fake-select option {
+    text-align: center;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div class="input-row">
+            <div class="label">Are you <i class="fas fa-asterisk" aria-hidden="true" style="font-size:6px;vertical-align: middle;"></i></div>
+           <div class="fake-select" id="fake_enquiry_type">
+                <div class="label_wrapper">
+                    <div class="label">Select</div>
+                    <div class="dropper" id="angle-toggler">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </div>
+                </div>
+                                
+                <div class="dropdown">
+                    <div class="option" data-value="null"></div>
+                    <div class="option" data-value="a student">Student</div>
+                    <div class="option" data-value="parent">Parent</div>
+                    <div class="option" data-value="other">Other</div>
+                </div>
+            </div>
+            <select class="hidden initial" name="enquiry_type" required="">
+                <option value="null" selected></option>
+                <option value="a student">Student</option>
+                <option value="parent">Parent</option>
+                <option value="other">Other</option>
+                <option value="" style="display:none" selected=""></option>
+            </select>
+    
+             
+
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

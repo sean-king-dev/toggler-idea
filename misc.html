@@ -1,0 +1,349 @@
+<style>
+    body, html {
+        background: var(--charcoal);
+        color: #fff;
+    }
+    
+    a {
+        color: var(--raspberry);
+    }
+    
+    .enquiry-form {
+        margin-top: 15%;
+        display: block;
+        text-align: center;
+    }
+    
+    .back-link {
+        padding: 20px 0px;
+    }
+    
+    form#kings-enquiry-form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .label_wrapper {
+        width: 100%;
+        height: 40px;
+        display: flex;
+    }
+    
+    .label_wrapper .label {
+        /* padding-left: 15% !important; */
+        /* padding-left: 50%; */
+        padding-left: 35% !important;
+        padding-top: 8px;
+        width: 250px;
+    }
+
+    .dropper {
+        width: 40px;
+        background: #57de61;
+        border-radius: 0 20px 20px 0;
+        border: 2px dotted blue;
+        position: relative;
+        width: 50px;
+        margin-left: 100px;
+    }
+    
+    .dropdown {
+        height: 0px;
+        overflow-y: hidden;
+    }
+    
+    input {
+        background: none;
+        padding: 8px 20px;
+        border: 2px solid #57de61;
+        width: 100%;
+        border-radius:20px;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .input-row {
+        height: 125px;
+    }
+
+    #questions_textarea.input-row{
+        height: 275px;
+    }
+
+    .radio_wrapper {
+        display: flex;
+        justify-content: center;
+        width: 90%; 
+   }
+
+    .radio {
+        width: 30%;
+        display: flex;
+    }
+    
+    textarea {
+        min-height: 200px;
+        width: 100%;
+        border-radius:20px;
+    }
+    
+    .enquiry-form .input-row>.label {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-size: 1.375rem;
+    }
+    
+    #contact-form-submit.button.third {
+        font-size: 1.375rem;
+        padding: 0px;
+    }
+    
+    /* .fake-select {
+        width: 100%;
+    }
+    
+    .fake-select .label {
+        padding: 8px 20px;
+        border: 2px solid #57de61;
+        width: calc(100% - 50px);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 40px;
+    }
+    
+    #fake_enquiry_type.fake-select {
+        width: 100%;
+    } */
+    
+    select {
+        max-width: 400px;
+    }
+    
+    .footer .constrainer {
+        width: 100%;
+        padding: unset;
+    }
+    
+    .fake-select .dropper .fa {
+        font-size: 1.375rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    /* .fa-angle-up {
+        display: none;
+    } */
+
+    .fake-select .fa-angle-up {
+        display: none; /* Initially hide the up angle icon */
+    }
+    .fake-select.active .fa-angle-up {
+        display: inline; /* Show up angle icon when active */
+    }
+
+    .fake-select i.fa.fa-angle-down {
+        display: block;
+    }
+    
+    .select-options {
+        text-align: center;
+    }
+
+    option {
+        background: var(--charcoal);
+        border:#57de61 2px solid;
+    }
+
+    select {
+        /* appearance: none; */
+        /* -webkit-appearance: none; */
+        /*  */
+        width: 100%;
+        font-size: 1.15rem;
+        padding: 0.675em 6em 0.675em 1em;
+        background-color: #fff;
+        border: 1px solid #caced1;
+        border-radius: 0.25rem;
+        color: #000;
+        cursor: pointer;
+    }
+
+    select.hidden.initial{
+        background: rgba(0,0,0,0);
+        /* background:linear-gradient(to right, transparent 0%, transparent 90%, var(--green) 90%, var(--green) 100%); */
+        height: 40px;
+        position: relative;
+        top:-40px;
+        margin-left: 0px;
+        border-radius: 20px;
+        width: 400px;
+    }
+
+    select.hidden{
+        background: rgba(0,0,0,0);
+        /* background:linear-gradient(to right, var(--charcoal) 0%, var(--charcoal) 90%, var(--green) 90%, var(--green) 100%); */
+        height: 40px;
+        width: 400px;
+        position: relative;
+        top:-40px;
+        margin-left: 0px;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        border: 2px solid var(--green)
+    }
+
+/* dropdown arrow hack */
+
+    select {
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    /*
+    .fake-select .dropper {
+        position: relative;
+        right: 0px;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        background: var(--green);
+        border-radius: 0 22px 22px 0;
+    }
+
+    .fake-select .dropdown,
+    .fake-select .dropdown:before {
+        position: absolute;
+        left: -2px;
+        right: -2px;
+    }
+
+    .fake-select .dropdown {
+        top: 100%;
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        z-index: 2;
+        background: #252f38;
+        border-radius: 0 0 14px 14px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .fake-select .dropdown .option {
+        width: 100%;
+        padding: 8px;
+    }
+    */
+
+    .fake-select .dropdown .option {
+        width: 100%;
+        padding: 8px;
+    }
+    
+    i.fa.fa-angle-up {
+        border: 1px solid red
+    }
+    i.fa.fa-angle-down {
+        border: 1px solid blue;
+    } 
+
+    /* gdpr hover */
+    .gdpr-hover{
+        position: relative;
+        top: -10vh;
+        left: 0%;
+        width: 200%;
+        padding-left: 100%;
+    }
+
+    .gdpr-hover:hover {
+        position: relative;
+        top: -75px;
+    }
+
+    .nationality_gdpr_wrapper {
+        height: 40px;
+        margin-top: -6vh;
+    }
+
+    .nationality_gdpr_wrapper .gdpr-hover:hover p {
+        /* border: 1px solid black; */
+        padding-bottom: 5px;
+        margin-left: 2px;
+    }
+
+    .gdpr-hover p {
+        background: transparent;
+        color: transparent;
+        text-align: left;
+    }
+
+    .gdpr-hover p a {
+        color: var(--charcoal);
+    }
+
+    .gdpr-hover:hover p {
+        background: var(--green);
+        color: var(--white);
+        padding-left: 10px;
+    }
+
+    .gdpr-hover:hover p:first-of-type {
+        padding: 10px 0 5px 10px;
+        margin-bottom: -10px;
+    }
+
+    .gdpr-hover:hover p:last-of-type {
+        margin-top: 1px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .gdpr-hover:hover p a {
+        color: var(--raspberry);
+    }
+
+</style>
+
+<!-- <script>
+    function toggleArrow() {
+        let upArrow = document.querySelector('i.fa.fa-angle-up');
+        let downArrow = document.querySelector('i.fa.fa-angle-down');
+        downArrow.classList.toggle("showArrowUp")
+    }
+</script> -->
+<!-- 
+<script>
+    // Get the angle toggler element
+    const angleToggler = document.getElementById('angle-toggler');
+
+    // Attach a click event listener
+    angleToggler.addEventListener('click', function() {
+        // Toggle the visibility of angle icons
+        const angleDown = angleToggler.querySelector('.fa-angle-down');
+        const angleUp = angleToggler.querySelector('.fa-angle-up');
+        angleDown.style.display = angleDown.style.display === 'none' ? 'inline' : 'none';
+        angleUp.style.display = angleUp.style.display === 'none' ? 'inline' : 'none';
+    });
+</script> -->
+<!-- <script>
+        // Get the elements
+        const fakeSelect = document.getElementById('fake_enquiry_type');
+    const angleToggler = fakeSelect.querySelector('.dropper');
+    const dropdown = fakeSelect.querySelector('.dropdown');
+
+    // Toggle active class on fake-select
+    angleToggler.addEventListener('click', function() {
+        fakeSelect.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!fakeSelect.contains(event.target)) {
+            fakeSelect.classList.remove('active');
+        }
+    });
+</script> -->
